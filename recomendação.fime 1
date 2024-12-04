@@ -1,0 +1,71 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+//Alice no País das Maravilhas, 10, fantasia, aventura//
+
+//Alice Através do Espelho, livre, fantasia, aventura//
+
+//Harry Potter, 10, fantasia, aventura
+
+//O Senhor dos Anéis, 14, aventura//
+
+//Arrebentando em Nova York, 14, ação, comédia//
+
+//Mr. Nice Guy, livre, ação, comédia//
+
+//Hora do Rush, 12, ação, comédia//
+
+//Bater ou Correr, 12, ação, comédia//
+
+//Operação Zodiaco, 12, ação, aventura//
+
+//Shaolin, 14, ação, drama//
+
+let campoldade; 
+
+function setup() {
+
+  createCanvas(400, 400);
+
+  campoldade = createInput("5");
+
+}
+
+ function draw() {
+
+  background(220);
+
+
+  let idade = campoldade.value();
+
+   let recomendação = geraRecomendação(idade);
+
+   text(recomendação, width / 3, height / 2); 
+
+}
+
+function geraRecomendação(idade) {
+
+  if(idade >= 10) {
+
+   if(idade >= 14) {
+
+     return "O Senhor dos Anéis";
+
+   } else {
+
+     return "Alice no País das Maravilhas";
+
+     }
+
+   } else {
+
+      return "Alice Através do Espelho";
+
+    }
+
+   }
