@@ -1,0 +1,81 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+let campoIdade;
+
+let campoAção;
+
+function setup() {
+
+  createCanvas(800, 400);
+
+  createSpan("Sua idade:");
+
+  campoIdade = createInput("5");
+
+  campoAção = createCheckbox("Gosta de Ação?");
+
+}
+
+function draw() {
+
+    background("white");
+
+    let idade = campoIdade.value();
+
+    let gostaDeAção = campoAção.checked();
+
+    let recomendacao = geraRecomendacao(idade, gostaDeAção);
+
+    fill(color(76, 0, 115));
+
+    textAlign(CENTER, CENTER);
+
+    textSize(38);
+
+    text(recomendacao, width / 2, height / 2);
+
+}
+
+function geraRecomendacao(idade, gostaDeAção) {
+
+
+    if (idade >= 10) {
+
+        if (idade >= 14) {
+
+            return "O Senhor dos Anéis";
+
+        } else {
+
+            if (gostaDeAção) {
+
+                return "Mr. Nice Guy";
+
+            } else {
+
+                return "Alice Através do Espelho";
+
+            }
+
+        }
+
+    } else {
+
+        if (gostaDeAção) {
+
+            return "A Lenda do Mestre Invencível";
+
+        } else {
+
+            return "Alice no País das Maravilhas";
+
+        }
+
+    }
+
+}
