@@ -1,0 +1,25 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}function setup() {
+  createCanvas(400, 400);
+  background("darkred")
+
+  textFont("Tahoma");
+  textSize(30)
+  createCanvas(400, 400);
+  background("darkred")
+
+  textFont("Tehoma");
+  textSize(30)
+  textAlign(CENTER,CENTER);
+
+}
+
+
+function draw(){
+  text("Oiiii, sou a Elisa!",200,200)
+}
